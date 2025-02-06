@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
+import { RxHamburgerMenu } from "react-icons/rx";
 
 function Header(): any {
 
-	const LinkStyle: string = "font-Heebo font-medium text-[20px] text-black transition duration-300 hover:cursor-pointer hover:text-gray-700";
+	const LinkStyle: string = "font-Heebo font-regular text-[20px] text-black transition duration-300 hover:cursor-pointer hover:text-gray-700";
 
 	return (
 		<>
