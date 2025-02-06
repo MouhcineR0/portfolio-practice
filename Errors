@@ -1,0 +1,9 @@
+tailwind err :
+➜  portfolio-practice git:(master) npx tailwind init
+npm error could not determine executable to run
+npm error A complete log of this run can be found in: /home/rmouhcin/.npm/_logs/2025-02-06T11_28_23_533Z-debug-0.log
+➜  portfolio-practice git:(master) npm install -D tailwindcss@3 postcss autoprefix
+
+----------------------------------------------------------------------
+
+

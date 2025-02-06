@@ -1,11 +1,11 @@
-module.exports = {
-	content: [
-		'./src/**/*.{ts,tsx,js,jsx}',
-	],
-	theme: {
-		colors: {
-			l7mer: 'red'
-		}
-	},
-	plugins: [],
-};
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: ["./src/**/*.{js,jsx,ts,tsx,html}"],
+  theme: {
+    fontFamily: {
+      Heebo: ["Heebo", "sans-serif"]
+    },
+    extend: {},
+  },
+  plugins: [],
+}
