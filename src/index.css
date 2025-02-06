@@ -1,1 +1,34 @@
 @import "tailwindcss";
+
+@font-face {
+	font-family: 'Heebo large';
+	src: url(fonts/Heebo-Black.ttf);
+}
+
+@font-face {
+	font-family: 'Heebo Bold';
+	src: url(fonts/Heebo-Bold.ttf);
+}
+@font-face {
+	font-family: 'Heebo ExtraBold';
+	src: url(fonts/Heebo-ExtraBold.ttf);
+}
+@font-face {
+	font-family: 'Heebo Light';
+	src: url(fonts/Heebo-Light.ttf);
+}
+@font-face {
+	font-family: 'Heebo Medium';
+	src: url(fonts/Heebo-Medium.ttf);
+}
+@font-face {
+	font-family: 'Heebo Regular';
+	src: url(fonts/Heebo-Regular.ttf);
+}
+
+@font-face {
+	font-family: 'Heebo Thin';
+	src: url(fonts/Heebo-Thin.ttf);
+}
+
+/* reference : https://www.1001fonts.com/heebo-font.html */
