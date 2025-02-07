@@ -4,7 +4,7 @@ import Introduction from "../../components/Introduction";
 function Home(): any {
 	return (
 		<>
-			<div className="container m-auto overflow-hidden">
+			<div className="container m-auto relative overflow-hidden">
 				<Header />
 				<Introduction />
 			</div>
