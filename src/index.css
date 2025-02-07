@@ -44,5 +44,8 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+	/* z-index: 1; */
+}
 
 /* reference : https://www.1001fonts.com/heebo-font.html */

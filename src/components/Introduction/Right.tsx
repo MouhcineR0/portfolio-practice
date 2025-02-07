@@ -4,7 +4,7 @@ import Img from "./../../assets/image.png"
 
 const Right = () => {
 	return (
-		<div className='rounded-[50%] bg-[#EDF7FA]'>
+		<div className='rounded-[50%] bg-[#EDF7FA] z-0'>
 			<img src={Img} alt="" className='relative bottom-[10px] left-[10px]' />
 		</div>
 	)

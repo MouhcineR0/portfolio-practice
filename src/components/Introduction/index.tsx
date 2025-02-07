@@ -7,7 +7,7 @@ function Introduction(): any {
 
 	return (
 		<>
-			<div className="container mt-[70px] mb-[27px] flex flex-row justify-center gap-6">
+			<div className="container mt-[70px] mb-[27px] flex flex-row justify-center gap-6 items-center">
 				<Left />
 				<Right />
 			</div>

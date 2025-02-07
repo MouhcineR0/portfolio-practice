@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
-import { RxHamburgerMenu } from "react-icons/rx";
-import useWidth from "../../hooks/useWidth";
 import { useState } from "react";
+import useWidth from "../../hooks/useWidth";
+import { RxHamburgerMenu } from "react-icons/rx";
+import { IoClose } from "react-icons/io5";
 
 function Header(): any {
 
@@ -31,25 +32,22 @@ function Header(): any {
 	)
 	// Responsive header
 	const ResponsiveList = (
-		<div className="w-[100vw] h-[100vh] bg-white text-black">
-			ss
-		</div>
+		<div className={`z-[2] w-[100%] h-[100vh] p-[27px] mr-[500px] bg-white text-black absolute top-0 transition-right duration-300 overflow-hidden flex justify-end ${isOpen ? 'left-[0]' : 'left-[150%]'}`}>
+			<IoClose size={35} onClick={toggleMenu} className="" />
+		</div >
 	);
 	const ResHeader = (
-		isOpen ? ResponsiveList :
-			< div className="w-full flex justify-end" >
-				<RxHamburgerMenu size={30} className="hover:cursor-pointer" onClick={toggleMenu} />
-			</div >
+		<div className="w-full flex justify-end">
+			<RxHamburgerMenu size={30} className="hover:cursor-pointer" onClick={toggleMenu} />
+		</div>
 	)
 
 
 	return (
 		<>
 			<div className="m-[27px]">
-				{
-					Width > 786 ? Header : ResHeader
-				}
-
+				{Width > 786 ? Header : ResHeader}
+				{ResponsiveList}
 			</div>
 		</>
 	)
