@@ -10,7 +10,6 @@ function Home(): any {
 				<Introduction />
 				<Posts />
 				<Works />
-				<Contact />
 			</div>
 		</>
 	)

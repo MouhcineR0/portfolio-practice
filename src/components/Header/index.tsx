@@ -26,7 +26,7 @@ function Header(): any {
 	}, [isOpen])
 
 
-	const LinkStyle: string = `font-Heebo font-regular text-[20px] text-black transition duration-300 hover:cursor-pointer hover:text-gray-700`;
+	const LinkStyle: string = `font-Heebo font-regular text-[20px] transition duration-300 hover:cursor-pointer hover:text-gray-700`;
 
 	const toggleMenu = (): void => {
 		setisOpen(!isOpen);
@@ -48,7 +48,7 @@ function Header(): any {
 	)
 	// Responsive header
 	const ResponsiveList = (
-		<div className={`w-full h-[100vh] bg-white text-black z-[2] absolute top-0 transition-left duration-300 ${isOpen ? 'left-[0]' : 'left-[150%]'}`}>
+		<div className={`w-full h-[100%] bg-white text-black z-[2] absolute top-0 transition-left duration-300 md:hidden block ${isOpen ? 'left-[0]' : 'left-[150%]'}`}>
 			<div className={`w-full container m-auto flex flex-col justify-end mt-4 gap-3`}>
 				<IoIosClose size={55} onClick={toggleMenu} className="self-end relative right-3 mb-4 cursor-pointer" color="gray" />
 				<NavLink to={'/Works'} className={({ isActive }) => isActive ? `${LinkStyle} text-[#FF6464] self-center` : `${LinkStyle} text-black self-center`}>

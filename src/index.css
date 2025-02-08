@@ -46,9 +46,10 @@
 
 * {
 	/* z-index: 1; */
-	/* overflow: hidden; */
+	/* overflow-x: hidden; */
 	font-family: 'Heebo';
 	scroll-behavior: smooth;
+	color: #21243D;
 }
 
 /* reference : https://www.1001fonts.com/heebo-font.html */
