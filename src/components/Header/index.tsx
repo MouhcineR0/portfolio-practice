@@ -3,17 +3,28 @@ import { useEffect, useState } from "react";
 import useWidth from "../../hooks/useWidth";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { IoIosClose } from "react-icons/io";
+import useKey from "../../hooks/useKey";
 
 function Header(): any {
 
 	const Width = useWidth();
 
 	const [isOpen, setisOpen] = useState(false);
+	// listener event for esc to close the menu
+	useKey("Escape", setisOpen);
 
 	useEffect(() => {
 		if (Width > 786 && isOpen)
 			setisOpen(false)
 	}, [Width])
+
+	useEffect(() => {
+		if (isOpen)
+			document.body.style.overflow = 'hidden';
+		else
+			document.body.style.overflow = 'auto';
+	}, [isOpen])
+
 
 	const LinkStyle: string = "font-Heebo font-regular text-[20px] text-black transition duration-300 hover:cursor-pointer hover:text-gray-700";
 
@@ -54,14 +65,14 @@ function Header(): any {
 	);
 	const ResHeader = (
 		<div className="w-full flex justify-end">
-			<RxHamburgerMenu size={30} className="hover:cursor-pointer" onClick={toggleMenu} />
+			<RxHamburgerMenu size={30} className="hover:cursor-pointer relative right-7" onClick={toggleMenu} />
 		</div>
 	)
 
 
 	return (
 		<>
-			<div className="m-[27px]">
+			<div className="my-[27px] container m-auto">
 				{Width > 769 ? Header : ResHeader}
 				{ResponsiveList}
 			</div>
