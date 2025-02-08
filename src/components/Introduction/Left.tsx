@@ -2,8 +2,6 @@ import Resume from './Resume';
 
 const Left = () => {
 
-	const LocalStyle: string = "";
-
 	return (
 		<div className="flex flex-col gap-[40px] font-Heebo md:order-1 order-2 md:text-start text-center">
 			<p className='font-bold lg:text-[44px] text-[34px] md:leading-[60px] leading-11'>
