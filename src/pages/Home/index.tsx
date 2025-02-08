@@ -6,7 +6,7 @@ import Works from "../../components/Works";
 function Home(): any {
 	return (
 		<>
-			<div className="relative overflow-hidden">
+			<div className="relative">
 				<Introduction />
 				<Posts />
 				<Works />

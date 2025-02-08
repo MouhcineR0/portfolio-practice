@@ -18,12 +18,13 @@ function Header(): any {
 			setisOpen(false)
 	}, [Width])
 
-	useEffect(() => {
-		if (isOpen)
-			document.body.style.overflow = 'hidden';
-		else
-			document.body.style.overflow = 'auto';
-	}, [isOpen])
+	// useEffect(() => {
+	// 	console.log("ss")
+	// 	if (isOpen)
+	// 		document.body.style.overflow = 'hidden';
+	// 	else
+	// 		document.body.style.overflow = 'auto';
+	// }, [isOpen])
 
 
 	const LinkStyle: string = `font-Heebo font-regular text-[20px] transition duration-300 hover:cursor-pointer hover:text-gray-700`;

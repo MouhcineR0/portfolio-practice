@@ -46,7 +46,7 @@
 
 * {
 	/* z-index: 1; */
-	/* overflow-x: hidden; */
+	overflow-x: hidden;
 	font-family: 'Heebo';
 	scroll-behavior: smooth;
 	color: #21243D;
