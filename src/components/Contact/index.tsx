@@ -31,7 +31,7 @@ function Contact() {
 	return (
 		<div className="flex flex-col md:gap-5 gap-2 mt-[60px]">
 			<div className="flex gap-6 items-center justify-center h-10">
-				{Socials.map((ele, _) => <a href={ele.url} target="_blank"><img src={ele.img} alt={ele.name} className="w-[27px] md:w-[40px]" /></a>)}
+				{Socials.map((ele, _) => <a href={ele.url} target="_blank"><img src={ele.img} alt={ele.name} className="w-[27px] md:w-[35px]" /></a>)}
 			</div>
 			<p className="text-[#21243D] text-[14px] text-center">
 				Copyright ©2020 All rights reserved

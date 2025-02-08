@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { useEffect, useState } from "react";
 import useWidth from "../../hooks/useWidth";
 import { RxHamburgerMenu } from "react-icons/rx";
@@ -26,7 +26,7 @@ function Header(): any {
 	}, [isOpen])
 
 
-	const LinkStyle: string = "font-Heebo font-regular text-[20px] text-black transition duration-300 hover:cursor-pointer hover:text-gray-700";
+	const LinkStyle: string = `font-Heebo font-regular text-[20px] text-black transition duration-300 hover:cursor-pointer hover:text-gray-700`;
 
 	const toggleMenu = (): void => {
 		setisOpen(!isOpen);
@@ -35,31 +35,31 @@ function Header(): any {
 	// Desktop | tablette header
 	const Header = (
 		<div className="w-full flex justify-end gap-9">
-			<Link to={'/Works'} className={LinkStyle}>
+			<NavLink to={'/Works'} className={({ isActive }) => isActive ? `${LinkStyle} text-[#FF6464]` : `${LinkStyle} text-black`}>
 				Works
-			</Link>
-			<Link to={'/Blog'} className={LinkStyle}>
+			</NavLink>
+			<NavLink to={'/Blog'} className={({ isActive }) => isActive ? `${LinkStyle} text-[#FF6464]` : `${LinkStyle} text-black`}>
 				Blog
-			</Link>
-			<Link to={'/Contact'} className={LinkStyle}>
+			</NavLink>
+			<NavLink to={'/Contact'} className={({ isActive }) => isActive ? `${LinkStyle} text-[#FF6464]` : `${LinkStyle} text-black`}>
 				Contact
-			</Link>
-		</div>
+			</NavLink>
+		</div >
 	)
 	// Responsive header
 	const ResponsiveList = (
 		<div className={`w-full h-[100vh] bg-white text-black z-[2] absolute top-0 transition-left duration-300 ${isOpen ? 'left-[0]' : 'left-[150%]'}`}>
 			<div className={`w-full container m-auto flex flex-col justify-end mt-4 gap-3`}>
 				<IoIosClose size={55} onClick={toggleMenu} className="self-end relative right-3 mb-4 cursor-pointer" color="gray" />
-				<Link to={'/Works'} className={`${LinkStyle} self-center`}>
+				<NavLink to={'/Works'} className={({ isActive }) => isActive ? `${LinkStyle} text-[#FF6464] self-center` : `${LinkStyle} text-black self-center`}>
 					Works
-				</Link>
-				<Link to={'/Blog'} className={`${LinkStyle} self-center`}>
+				</NavLink>
+				<NavLink to={'/Blog'} className={({ isActive }) => isActive ? `${LinkStyle} text-[#FF6464] self-center` : `${LinkStyle} text-black self-center`}>
 					Blog
-				</Link>
-				<Link to={'/Contact'} className={`${LinkStyle} self-center`}>
+				</NavLink>
+				<NavLink to={'/Contact'} className={({ isActive }) => isActive ? `${LinkStyle} text-[#FF6464] self-center` : `${LinkStyle} text-black self-center`}>
 					Contact
-				</Link>
+				</NavLink>
 			</div >
 		</div>
 	);
