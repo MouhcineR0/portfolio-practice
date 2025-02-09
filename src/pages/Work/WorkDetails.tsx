@@ -62,7 +62,7 @@ function WorkDetails() {
 		},
 	]
 	const markdownContent = `
-# Welcome to Markdown in React!
+# <div class="text">Title</div>
 
 Here is an image from the internet:  
 ![Test Image](https://avatars.githubusercontent.com/u/132463265?v=4)
