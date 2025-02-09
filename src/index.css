@@ -53,6 +53,14 @@
 	scroll-behavior: smooth;
 }
 
+.markdown-container h1 {
+	color: red;
+}
+
+.markdown-container h2 {
+	color: blue;
+}
+
 /* body {
 	overflow-y: hidden;
 } */
