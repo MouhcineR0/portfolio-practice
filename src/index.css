@@ -40,19 +40,19 @@
 	font-weight: 900;
 }
 
+/* reference : https://www.1001fonts.com/heebo-font.html */
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 * {
 	/* z-index: 1; */
+	color: #21243D;
 	font-family: 'Heebo';
 	scroll-behavior: smooth;
-	color: #21243D;
 }
 
 /* body {
 	overflow-y: hidden;
 } */
-
-/* reference : https://www.1001fonts.com/heebo-font.html */

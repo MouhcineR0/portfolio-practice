@@ -1,11 +1,14 @@
-import { Link } from "react-router-dom"
+import { useParams } from 'react-router-dom'
 import Dashboard from "../../assets/works/Dashboard.png"
 import Illustration from "../../assets/works/Illustration.png"
 import Typography from "../../assets/works/Typography.png"
 import Design from "../../assets/works/Design.png"
 import Website from "../../assets/works/Website.png"
+import ReactMarkdown from "react-markdown";
 
-function Work() {
+function WorkDetails() {
+
+	const { id } = useParams();
 
 	interface Work {
 		id: number,
@@ -58,34 +61,17 @@ function Work() {
 			img: Design
 		},
 	]
+	const markdownContent = `
+# Welcome to Markdown in React!
 
+Here is an image from the internet:  
+![Test Image](https://avatars.githubusercontent.com/u/132463265?v=4)
+`;
 	return (
-		<div className='container m-auto md:px-0 px-2'>
-			<h1 className='leading-[60px] md:mt-[60px] mt-[40px] font-bold md:text-[44px] text-[30px]'>Work</h1>
-			<div className="flex flex-col">
-				{
-					Works.map((ele, _) => {
-						return (
-							<>
-								<Link to={`${ele.id}`} className="flex md:flex-row flex-col md:my-[35px] my-[28px] md:gap-8 gap-3">
-									<img src={ele.img} alt="" className="md:w-[30%] w-full self-center" />
-									<div className="flex flex-col md:gap-4 gap-2">
-										<h2 className="md:text-[30px] text-[24px] font-bold">{ele.title}</h2>
-										<div className="flex gap-5">
-											<h4 className="bg-black md:text-[18px] text-[16px] text-white px-3 py-1 rounded-full font-black">{ele.year}</h4>
-											<h4 className="text-[#8695A4] md:text-[20px] text-[16px]">{ele.topic}</h4>
-										</div>
-										<p className="text-[16px]">{ele.text}</p>
-									</div>
-								</Link>
-								<hr className="w-full h-[1px] bg-[#E0E0E0]" />
-							</>
-						)
-					})
-				}
-			</div>
+		<div className="markdown-container">
+			<ReactMarkdown>{markdownContent}</ReactMarkdown>
 		</div>
 	)
 }
 
-export default Work
+export default WorkDetails
