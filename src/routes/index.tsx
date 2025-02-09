@@ -4,6 +4,7 @@ import Home from "../pages/Home";
 import Header from "../components/Header";
 import Contact from "../components/Contact";
 import Blog from "../pages/Blog";
+import Work from "../pages/Work";
 
 function Index(): any {
 	return (
@@ -12,6 +13,7 @@ function Index(): any {
 			<Routes>
 				<Route path="/" element={<Home />} />
 				<Route path="/Blog" element={<Blog />} />
+				<Route path="/Work" element={<Work />} />
 				<Route path="*" element={<Error404 />} />
 			</Routes>
 			<Contact />

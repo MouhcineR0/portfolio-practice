@@ -35,7 +35,7 @@ function Header(): any {
 	// Desktop | tablette header
 	const Header = (
 		<div className="w-full flex justify-end gap-9">
-			<NavLink to={'/Works'} className={({ isActive }) => isActive ? `${LinkStyle} text-[#FF6464]` : `${LinkStyle} text-black`}>
+			<NavLink to={'/Work'} className={({ isActive }) => isActive ? `${LinkStyle} text-[#FF6464]` : `${LinkStyle} text-black`}>
 				Works
 			</NavLink>
 			<NavLink to={'/Blog'} className={({ isActive }) => isActive ? `${LinkStyle} text-[#FF6464]` : `${LinkStyle} text-black`}>
@@ -51,7 +51,7 @@ function Header(): any {
 		<div className={`w-full h-full bg-[#ffffffed] text-black z-[2] fixed top-0 transition-left duration-300 md:hidden block ${isOpen ? 'left-[0]' : 'left-[150%]'}`}>
 			<div className={`w-full container m-auto flex flex-col justify-end mt-4 gap-3`}>
 				<IoIosClose size={55} onClick={toggleMenu} className="self-end relative right-3 mb-4 cursor-pointer" color="gray" />
-				<NavLink to={'/Works'} className={({ isActive }) => isActive ? `${LinkStyle} text-[#FF6464] self-center` : `${LinkStyle} text-black self-center`}>
+				<NavLink to={'/Work'} className={({ isActive }) => isActive ? `${LinkStyle} text-[#FF6464] self-center` : `${LinkStyle} text-black self-center`}>
 					Works
 				</NavLink>
 				<NavLink to={'/Blog'} className={({ isActive }) => isActive ? `${LinkStyle} text-[#FF6464] self-center` : `${LinkStyle} text-black self-center`}>
