@@ -14,3 +14,5 @@ This project is a practice portfolio website built with **React** and **TypeScri
    ```bash
    npm i && npm run dev
    ```
+2. **Visit Project on vercel**
+   [Portfolio][https://portfolio-practice-henna-ten.vercel.app]
