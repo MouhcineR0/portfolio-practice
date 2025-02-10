@@ -1,13 +1,13 @@
 import { Route, Routes, BrowserRouter } from "react-router-dom";
 import Layout from "../layout";
-import ImportDelay from "../utils/ImportDelay";
-import { Suspense } from "react";
+import { Wait } from "../utils/ImportDelay";
+import { lazy, Suspense } from "react";
 import Loading from "../utils/Loading";
-const Error404 = ImportDelay("../pages/Error404");
-const Home = ImportDelay("../pages/Home");
-const Blog = ImportDelay("../pages/Blog");
-const Work = ImportDelay("../pages/Work");
-const WorkDetails = ImportDelay("../pages/Work/WorkDetails");
+const Error404 = lazy(() => Wait(1000).then(() => import("../pages/Error404")));
+const Home = lazy(() => Wait(1000).then(() => import("../pages/Home")));
+const Blog = lazy(() => Wait(1000).then(() => import("../pages/Blog")));
+const Work = lazy(() => Wait(1000).then(() => import("../pages/Work")));
+const WorkDetails = lazy(() => Wait(1000).then(() => import("../pages/Work/WorkDetails")));
 
 function Index(): any {
 	return (
