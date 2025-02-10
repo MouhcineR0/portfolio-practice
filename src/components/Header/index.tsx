@@ -35,14 +35,14 @@ function Header(): any {
 	// Desktop | tablette header
 	const Header = (
 		<div className="w-full flex justify-end gap-9">
+			<NavLink to={'/'} className={({ isActive }) => isActive ? `${LinkStyle} text-[#FF6464]` : `${LinkStyle} text-black`}>
+				Home
+			</NavLink>
 			<NavLink to={'/work'} className={({ isActive }) => isActive ? `${LinkStyle} text-[#FF6464]` : `${LinkStyle} text-black`}>
 				Works
 			</NavLink>
 			<NavLink to={'/blog'} className={({ isActive }) => isActive ? `${LinkStyle} text-[#FF6464]` : `${LinkStyle} text-black`}>
 				Blog
-			</NavLink>
-			<NavLink to={'/contact'} className={({ isActive }) => isActive ? `${LinkStyle} text-[#FF6464]` : `${LinkStyle} text-black`}>
-				Contact
 			</NavLink>
 		</div >
 	)
@@ -51,14 +51,14 @@ function Header(): any {
 		<div className={`w-full h-full bg-[#ffffffed] text-black z-[2] fixed top-0 transition-left duration-300 md:hidden block ${isOpen ? 'left-[0]' : 'left-[150%]'}`}>
 			<div className={`w-full container m-auto flex flex-col justify-end mt-4 gap-3`}>
 				<IoIosClose size={55} onClick={toggleMenu} className="self-end relative right-3 mb-4 cursor-pointer" color="gray" />
+				<NavLink to={'/'} onClick={() => setisOpen(false)} className={({ isActive }) => isActive ? `${LinkStyle} text-[#FF6464] self-center` : `${LinkStyle} text-black self-center`}>
+					Home
+				</NavLink>
 				<NavLink to={'/work'} onClick={() => setisOpen(false)} className={({ isActive }) => isActive ? `${LinkStyle} text-[#FF6464] self-center` : `${LinkStyle} text-black self-center`}>
 					Works
 				</NavLink>
 				<NavLink to={'/blog'} onClick={() => setisOpen(false)} className={({ isActive }) => isActive ? `${LinkStyle} text-[#FF6464] self-center` : `${LinkStyle} text-black self-center`}>
 					Blog
-				</NavLink>
-				<NavLink to={'/contact'} onClick={() => setisOpen(false)} className={({ isActive }) => isActive ? `${LinkStyle} text-[#FF6464] self-center` : `${LinkStyle} text-black self-center`}>
-					Contact
 				</NavLink>
 			</div >
 		</div>

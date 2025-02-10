@@ -7,9 +7,10 @@ import useWidth from "../../hooks/useWidth"
 function Works() {
 
 	let Width = useWidth();
-	// images should be hosted
+
 	const works = [
 		{
+			id: 1,
 			Title: "Designing Dashboards",
 			Date: "2020",
 			topic: "Dashboard",
@@ -18,6 +19,7 @@ function Works() {
 			url: '/works/Dashboard'
 		},
 		{
+			id: 2,
 			Title: "Vibrant Portraits of 2020",
 			Date: "2020",
 			topic: "Illustration",
@@ -26,6 +28,7 @@ function Works() {
 			url: '/works/Illustration'
 		},
 		{
+			id: 3,
 			Title: "36 Days of Malayalam type",
 			Date: "2017",
 			topic: "Typography",
@@ -45,7 +48,7 @@ function Works() {
 							return (null);
 						return (
 							<>
-								<Link to={`${ele.url}`} className="flex flex-col md:flex-row gap-5 items-center">
+								<Link to={`work/${ele.id}`} key={index} className="flex flex-col md:flex-row gap-5 items-center">
 									<img src={ele.img} alt="" className="xl:w-[20%] lg:w-[25%] md:w-[30%] h-auto" />
 									<div className="flex flex-col self-start gap-4">
 										<h1 className="xl:text-[30px] lg:text-[27px] text-[24px] font-bold">{ele.Title}</h1>

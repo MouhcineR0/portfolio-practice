@@ -41,9 +41,9 @@ function Posts() {
 				</div>
 				<div className="flex md:flex-row flex-col text-[#21243D] justify-between items-center gap-5 md:gap-0">
 					{
-						Post.slice(0, 2).map((ele, _) => {
+						Post.slice(0, 2).map((ele, ind) => {
 							return (
-								<div className="flex flex-col gap-4 bg-white p-5 md:w-[48%] w-[95%] rounded-md">
+								<div key={ind} className="flex flex-col gap-4 bg-white p-5 md:w-[48%] w-[95%] rounded-md">
 									<h2 className='font-bold md:text-[26px] text-[22px]'>{ele.Title}</h2>
 									<div className='md:text-[18px] text-[16px] flex gap-3'>
 										<span>{ele.Date}</span>

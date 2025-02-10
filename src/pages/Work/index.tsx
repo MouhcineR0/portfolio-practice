@@ -64,10 +64,10 @@ function Work() {
 			<h1 className='leading-[60px] md:mt-[60px] mt-[40px] font-bold md:text-[44px] text-[30px]'>Work</h1>
 			<div className="flex flex-col">
 				{
-					Works.map((ele, _) => {
+					Works.map((ele, ind) => {
 						return (
 							<>
-								<Link to={`${ele.id}`} className="flex md:flex-row flex-col md:my-[35px] my-[28px] md:gap-8 gap-3">
+								<Link to={`${ele.id}`} key={ind} className="flex md:flex-row flex-col md:my-[35px] my-[28px] md:gap-8 gap-3">
 									<img src={ele.img} alt="" className="md:w-[30%] w-full self-center" />
 									<div className="flex flex-col md:gap-4 gap-2">
 										<h2 className="md:text-[30px] text-[24px] font-bold">{ele.title}</h2>

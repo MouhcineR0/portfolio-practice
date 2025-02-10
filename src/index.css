@@ -54,11 +54,45 @@
 }
 
 .markdown-container h1 {
-	color: red;
+	line-height: 60px;
+	font-size: 30px;
 }
 
 .markdown-container h2 {
-	color: blue;
+	line-height: 60px;
+	font-size: 24px;
+}
+
+.markdown-container img {
+	border-radius: 1%;
+}
+
+.markdown-container p {
+	color: black;
+	font-size: 16px;
+}
+
+@media (max-width : 768) {
+
+	.markdown-container h1 {
+		line-height: 60px;
+		font-size: 26px;
+	}
+
+	.markdown-container h2 {
+		line-height: 60px;
+		font-size: 20px;
+	}
+
+	.markdown-container img {
+		border-radius: 1%;
+	}
+
+	.markdown-container p {
+		color: black;
+		font-size: 16px;
+	}
+
 }
 
 /* body {

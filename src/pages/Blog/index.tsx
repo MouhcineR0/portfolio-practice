@@ -1,15 +1,8 @@
 import { Link } from 'react-router-dom'
+import { BlogInterface } from '../../interfaces'
 
 function Blog() {
-
-	interface Blog {
-		id: number,
-		title: string,
-		Date: string,
-		topic: string,
-		text: string,
-	}
-	const Blogs: Blog[] = [
+	const Blogs: BlogInterface[] = [
 		{
 			id: 1,
 			title: "UI Interactions of the week",
@@ -52,10 +45,10 @@ function Blog() {
 			<h1 className='leading-[60px] md:mt-[60px] mt-[40px] font-bold md:text-[44px] text-[30px]'>Blogs</h1>
 			<div className="flex flex-col">
 				{
-					Blogs.map((ele, _) => {
+					Blogs.map((ele, ind) => {
 						return (
 							<>
-								<Link to={`blog/${ele.id}`} className="flex flex-col md:my-[35px] my-[28px] md:gap-2 gap-1">
+								<Link to={`blog/${ele.id}`} key={ind} className="flex flex-col md:my-[35px] my-[28px] md:gap-2 gap-1">
 									<h2 className='md:text-[30px] text-[26px] font-medium'>{ele.title}</h2>
 									<div className="flex items-center gap-5">
 										<h3 className='md:text-[20px] text-[16px]'>{ele.Date}</h3>

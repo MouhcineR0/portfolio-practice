@@ -6,20 +6,11 @@ import Design from "../../assets/works/Design.png"
 import Website from "../../assets/works/Website.png"
 import Markdown from 'markdown-to-jsx'
 import { useEffect, useState } from 'react'
+import { WorkInterface } from '../../interfaces'
 
 function WorkDetails() {
 
-	interface Work {
-		id: number,
-		title: string,
-		year: string,
-		topic: string,
-		text: string,
-		img: string,
-		article: string
-	}
-
-	const Works: Work[] = [
+	const Works: WorkInterface[] = [
 		{
 			id: 1,
 			title: "Designing Dashboards",
@@ -91,31 +82,34 @@ function WorkDetails() {
 ![img](http://localhost:5173/src/assets/blog/image3.png)`
 		},
 	]
-	let markdownContent = `
-Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
-![img](http://localhost:5173/src/assets/blog/image1.png)
-#Heading 1
-##Heading 2
-![img](http://localhost:5173/src/assets/blog/image2.png)
-![img](http://localhost:5173/src/assets/blog/image3.png)
-`;
-	const { id } = useParams();
-	const [TargetElement, setTargetElement] = useState({});
+
+	const { id } = useParams<{ id: string }>();
+	const [TargetElement, setTargetElement] = useState<WorkInterface | null>(null);
 
 	useEffect(() => {
-		console.log(parseInt(id || '0'))
-		setTargetElement(() => Works.find((ele, _) => ele.id == parseInt(id || '0')))
-		console.log(Object.keys(TargetElement));
-	}, [])
+		const Target = Works.find((ele, _) => ele.id == parseInt(id || '0'))
+
+		setTargetElement(Target || null);
+	}, [id])
+
 
 	return (
 		<>
 			{
+				Object.keys(TargetElement || {}).length ? (
+					<div className="container m-auto flex flex-col md:mt-11 mt-8 md:px-0 px-2">
+						<h1 className='md:text-[34px] text-[30px] font-bold leading-[40px] md:leading-none md:mb-3 mb-2'>{TargetElement?.title}</h1>
+						<div className="flex items-center gap-5 md:mb-15 mb-10">
+							<h3 className='text-[18px] text-white bg-[#FF7C7C] px-3 py-1 font-black rounded-full'>{TargetElement?.year}</h3>
+							<h3 className='md:text-[20px] text-[18px]'>{TargetElement?.topic}</h3>
+						</div>
+						< div className="markdown-container">
+							<Markdown className='flex flex-col gap-3'>{TargetElement?.article || ''}</Markdown>
+						</div >
+					</div>
 
+				) : null
 			}
-			< div className="markdown-container" >
-				<Markdown>{markdownContent}</Markdown>
-			</div >
 		</>
 	)
 }
